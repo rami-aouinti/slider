@@ -2,7 +2,7 @@
   "name": "vitify-slide",
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build --base /vitify-slide/",
     "dev": "slidev --open",
     "export": "slidev export"
   },
