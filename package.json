@@ -1,6 +1,9 @@
 {
   "name": "vitify-slide",
   "private": true,
+  "packageManager": "pnpm@7.5.0",
+  "author": "Yue JIN <yjin@nustarnuclear.com>",
+  "description": "Presentation for Vitify Admin",
   "scripts": {
     "build": "slidev build --base /vitify-slide/",
     "dev": "slidev --open",
@@ -8,8 +11,7 @@
   },
   "dependencies": {
     "@slidev/cli": "^0.34.3",
-    "@slidev/theme-default": "*",
-    "@slidev/theme-seriph": "*"
+    "@slidev/theme-default": "*"
   },
   "devDependencies": {
     "@iconify-json/logos": "^1.1.9"
