@@ -12,6 +12,7 @@ info: |
 # persist drawings in exports and build
 drawings:
   persist: false
+colorSchema: 'dark'
 ---
 
 # Welcome to Vitify Admin
