@@ -79,6 +79,7 @@ image: https://d33wubrfki0l68.cloudfront.net/b4b145110098a2c031d3ba49551c504aef6
 - 通过环境变量更改后端api地址，不再需要请求`config.json`
 
 <img src="/vite-restart.jpg" class="rounded-md mt-2">
+<logos-vitejs class="absolute text-8xl right-24 top-24" />
 
 ---
 
@@ -160,50 +161,7 @@ const doubled = computed(() => count.value * 2)
 
 ---
 
-# TypeScript Project Reference
-
-- 为不同环境提供正确的类型(app vs test)
-- VSCode中获得正确的intellisense
-- 防止意外引入不必要的源文件
-
-<v-click>
-<img src="/volar-status-bar-1.jpg">
-<img src="/volar-status-bar-2.jpg">
-</v-click>
-
----
-
-# Volar
-
-<v-clicks>
-
-- 模板TypeScript检查
-- `.vue`单组件文件类型
-- 单组件窗格分离
-- 通过[`@volar-plugins/vetur`](https://github.com/johnsoncodehk/volar-plugins/tree/master/packages/vetur)获得`vetur`的功能，迁移旧项目及js项目
-- 项目已内置 Vuetify 2 type支持
-</v-clicks>
-
-<img v-click src="/volar-vuetify-1.jpg" class="h-25">
-<img v-click src="/volar-vuetify-2.jpg" class="h-25">
-
----
-
-# 🍍Pinia
-
-<v-clicks>
-
-- 支持 options api 和 composition api
-- 不再需要写`mutation`
-- 配合`vue devtools` debug 全局状态
-
-</v-clicks>
-
-<!-- 数据结构一目了然；直接测试响应性和动画；message直接新建，不用再window里暴露一个测试函数 -->
-
----
-
-# 自动导入注册svg icons
+# 自动导入注册 svg icons
 
 把svg格式的图标放在相应文件夹下，即可在`<v-icon>`中使用
 
@@ -225,6 +183,35 @@ const svgIcons = Object.fromEntries(
 )
 new Vuetify({icon:{values:{...svgIcons}}})
 ```
+
+---
+
+# Volar
+
+<v-clicks>
+
+- 模板TypeScript检查
+- `.vue`单组件文件类型
+- 单组件窗格分离
+- 通过[`@volar-plugins/vetur`](https://github.com/johnsoncodehk/volar-plugins/tree/master/packages/vetur)获得`vetur`的功能，迁移旧项目及js项目
+- 项目已内置 Vuetify 2 type支持
+</v-clicks>
+
+<img v-click src="/volar-vuetify-1.jpg" class="h-25">
+<img v-click src="/volar-vuetify-2.jpg" class="h-25">
+
+---
+
+# TypeScript Project Reference
+
+- 为不同环境提供正确的类型(app vs test)
+- VSCode中获得正确的intellisense
+- 防止意外引入不必要的源文件
+
+<v-click>
+<img src="/volar-status-bar-1.jpg">
+<img src="/volar-status-bar-2.jpg">
+</v-click>
 
 ---
 layout: section
@@ -369,6 +356,20 @@ const props = withDefaults(
 </div>
 
 ---
+
+# 🍍Pinia
+
+<v-clicks>
+
+- 支持 options api 和 composition api
+- 不再需要写`mutation`
+- 配合`vue devtools` debug 全局状态
+
+</v-clicks>
+
+<!-- 数据结构一目了然；直接测试响应性和动画；message直接新建，不用再window里暴露一个测试函数 -->
+
+---
 layout: two-cols
 ---
 
@@ -385,6 +386,45 @@ layout: two-cols
 ::right::
 
 <Portal class="h-1/2 mt-24"/>
+
+---
+
+# I18n
+
+`vue-i18n v8` + `vue-i18n-bridge` + `unplugin-vue-i18n` + `i18n-Ally`
+- Messages 预编译
+- SFC Custom block
+
+<div v-click class="grid grid-cols-2 gap-x-4 mt-4">
+
+```json
+// zh.json
+{
+  "viewLevel": {
+    "private": "自己",
+    "group": "组内",
+    "public": "公开",
+    "disabledInfo": "不能改变该对象可见级别，请确认你具有权限。"
+  }
+}
+```
+
+```vue
+<!-- ViewLevel.vue -->
+<i18n lang="json" locale="zh">
+{
+  "private": "自己",
+  "group": "组内",
+  "public": "公开",
+  "disabledInfo": "不能改变该对象可见级别，请确认你具有权限。"
+}
+</i18n>
+```
+
+</div>
+
+<!-- 全网第一个实现这个组合，经历了i18n-composable到bridge, vite-plugin到unplugin -->
+<!-- i18n-Ally 可以inline显示翻译结果，快速提取及添加翻译，提示翻译完成度... -->
 
 ---
 
@@ -453,59 +493,148 @@ layout: two-cols
 
 ::right::
 
-<logos-vitest class="text-8xl ml-48"/>
+<logos-vitest class="text-8xl ml-48 mt-12"/>
 
 <!-- 不再需要vue-jest等额外的设置和编译 -->
 
 ---
-
-# Testing Library
-
+layout: two-cols
 ---
 
-# Cypress(WIP)
+# How to test <Marker class="text-orange-400">tips</Marker>
 
-E2E测试，模拟真实的生产环境
+- 黑盒测试
+<img src="/component-testing.png" class="h-50">
+<v-click>
 
----
+- 避免组件的实现细节
+  - 组件的内部状态
+  - 组件的内部方法
+  - 组件的生命周期方法
+  - 子组件
 
-# I18n
+</v-click>
 
-`vue-i18n v8` + `vue-i18n-bridge` + `unplugin-vue-i18n` + `i18n-Ally`
-- Messages 预编译
-- SFC Custom block
+::right::
+<div v-click class="ml-4 absolute bottom-12">
 
-<div v-click class="grid grid-cols-2 gap-x-4 mt-4">
+### Reference
 
-```json
-// zh.json
-{
-  "viewLevel": {
-    "private": "自己",
-    "group": "组内",
-    "public": "公开",
-    "disabledInfo": "不能改变该对象可见级别，请确认你具有权限。"
-  }
-}
-```
-
-```vue
-<!-- ViewLevel.vue -->
-<i18n lang="json" locale="zh">
-{
-  "private": "自己",
-  "group": "组内",
-  "public": "公开",
-  "disabledInfo": "不能改变该对象可见级别，请确认你具有权限。"
-}
-</i18n>
-```
+- [Vue3 文档 Testing 教程](https://vuejs.org/guide/scaling-up/testing.html)
+- [`@vue/test-utils`文档](https://v1.test-utils.vuejs.org/guides/#knowing-what-to-test)
+- ["Component Tests with Vue.js" by Matt O'Connell](https://www.youtube.com/watch?v=OIpfWTThrK8&ab_channel=VueNYC)
+- [`testing-library`文档](https://testing-library.com/docs/)
+- [End-to-End or Component Tests](https://docs.cypress.io/guides/core-concepts/testing-types#End-to-End-or-Component-Tests)
 
 </div>
 
-<!-- 全网第一个实现这个组合，经历了i18n-composable到bridge, vite-plugin到unplugin -->
-<!-- i18n-Ally 可以inline显示翻译结果，快速提取及添加翻译，提示翻译完成度... -->
+---
 
+# Testing Library <logos-testing-library />
+
+- 处理 DOM 节点而不是组件实例
+- 基于 `@vue/test-utils` 并隐藏了不适用于组件测试规范的方法
+
+<v-click>
+
+```ts {2|3-5|7-8|10-11|13-14}
+it('login correctly', async () => {
+  const { getBytext, getByLabelText } = renderWithVuetify(loginPage)
+  getByText('用户登录')
+  const userInput = getByLabelText('用户名')
+  await fireEvent.update(userInput, 'admin')
+
+  const passwordInput = getByLabelText('密码')
+  await fireEvent.update(passwordInput, 'admin')
+
+  const button = getByText('登录')
+  await fireEvent.click(button)
+
+  const store = useUserStore()
+  expect(store.login).toBeCalledWith({ username: 'admin', password: 'admin' })
+})
+```
+</v-click>
+
+<v-click>
+
+- 90%以上的测试不需要用到`@vue/test-utils`
+</v-click>
+
+---
+
+# Component Testing Example
+
+```ts {2|3|4-8|9-10|11-14|15-17}
+it('message should show and disappear after seconds', async () => {
+  vi.useFakeTimers()
+  const { getByText, getByTitle, queryByText } = renderWithVuetify(AppMessage)
+  const store = useMessageStore()
+  store.messages = [
+    { text: '测试消息', type: 'info', show: true, time: new Date(), id: 1 },
+  ]
+  getByText('没有新的通知')
+  await flushPromises()
+  getByText('测试消息')
+  vi.runAllTimers()
+  await nextTick()
+  expect(queryByText('测试消息')).toBeNull()
+  vi.useRealTimers()
+  const buttonEmpty = getByTitle('清除所有通知')
+  await fireEvent.click(buttonEmpty)
+  getByText('没有新的通知')
+})
+```
+---
+
+# Store Testing Example
+
+```ts {1-7|9-11|13-20}
+vi.mock('@/api/monitor', () => {
+  return {
+    getLastCorrectData: vi.fn(() => ({
+      data: [{ time_produced: '2022-04-30T13:00:00', id: 4 }],
+    })),
+  }
+})
+describe('Monitor Store', () => {
+  beforeEach(() => {
+    setActivePinia(createPinia())
+  })
+  it('Should remove CorrectData more than 24h ago', async () => {
+    const store = useMonitorStore()
+    ;(store.correctList as any) = [
+      { time_produced: '2022-04-20T13:00:00', id: 1 },
+      { time_produced: '2022-04-21T13:00:00', id: 2 },
+      { time_produced: '2022-04-30T12:00:00', id: 3 },
+    ]
+    await store.getLatestData()
+    expect(store.correctList.length).toBe(2)
+  })
+})
+```
+
+---
+
+# Cypress(WIP) <Marker class="text-purple-400">Upcoming</Marker>
+
+E2E测试，模拟真实的生产环境
+
+- Build完之后配合后端一起测试
+  - Router
+  - Request handling
+  - Top-level components
+  - Browser
+
+<v-click>
+
+- Cypress也可以组件测试
+  - style
+  - native DOM events
+  - cookies, localStorage
+</v-click>
+
+<!-- Cypress的组件测试是跑在真实浏览器环境下的，不像vitest用的jsdom，没有style没有layout -->
 ---
 
 # Why not Vue 2.7?
@@ -516,7 +645,7 @@ E2E测试，模拟真实的生产环境
   - 和 Pinia 一起使用会报错
 - 社区还没跟上
   - vue-i18n-bridge 不支持 Vue 2.7
-  - vue-test-util 不能正常更新dom
+  - @vue/test-util 不能正常更新dom
 
 </div>
 
@@ -580,7 +709,7 @@ const weightedDist = computed(() => {
 # Recap
 - 新的 Vitiy Admin 模板
 - Vite 生态
-- Vue3 新语法
+- Vue3 新语法和全家桶
 - 单元、组件、E2E测试
 - 在线监测的一些改动
 <v-click>
@@ -588,6 +717,8 @@ const weightedDist = computed(() => {
 - 前端技术栈及项目架构已达到企业级
 
 </v-click>
+
+<!-- 我们的技术栈、开发体验、开发效率，甚至是产品质量甚至是可以超过大厂的产品的。至少我觉得我现在搭建的这个原型项目可以说是企业级的，没有在同类开源项目里找到比我搭得更好的了。web开发没有垄断技术，最好的东西都可以在开源社区找到，我们所要做的是把这些最好的东西拼起来为我们所用。 -->
 
 ---
 layout: center
