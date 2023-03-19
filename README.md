@@ -1,3 +1,7 @@
+# Moved
+
+This repo has moved to [kingyue737/slides](https://github.com/kingyue737/slides) monorepo.
+
 # Slide for Vitify Admin 
 
 To start the slide show:
