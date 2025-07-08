@@ -11,8 +11,17 @@ info: |
   Presentation for Vitify Admin and new features in Online Monitor.
 # persist drawings in exports and build
 drawings:
-  persist: false
+  persist: true
 colorSchema: 'dark'
+features:
+  editor: true
+  clickToAdvance: true
+  controls: true
+  overview: true
+  download: true
+  nav: true
+  darkMode: true
+  camera: true
 ---
 
 # Welcome to Vitify Admin

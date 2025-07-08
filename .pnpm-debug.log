@@ -1,0 +1,155 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "vitify-slide",
+      "private": true,
+      "packageManager": "pnpm@7.5.0",
+      "author": "Yue JIN <yjin@nustarnuclear.com>",
+      "description": "Presentation for Vitify Admin",
+      "scripts": {
+        "build": "slidev build --base /vitify-slide/",
+        "dev": "slidev --open",
+        "export": "slidev export"
+      },
+      "dependencies": {
+        "@slidev/cli": "^0.34.3",
+        "@slidev/theme-default": "*"
+      },
+      "devDependencies": {
+        "@iconify-json/logos": "^1.1.9"
+      }
+    },
+    "prefix": "/home/raouinti/Projects/VitifyProjects/vitify-slide"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/home/raouinti/.local/share/pnpm/store/v3",
+    "virtualStoreDir": "/home/raouinti/Projects/VitifyProjects/vitify-slide/node_modules/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/home/raouinti/Projects/VitifyProjects/vitify-slide",
+    "stage": "resolution_started"
+  },
+  "4 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@iconify-json/logos/1.1.9",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@iconify-json/logos",
+      "rawSpec": "^1.1.9"
+    }
+  },
+  "5 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@slidev/cli/0.34.3",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@slidev/cli",
+      "rawSpec": "^0.34.3"
+    }
+  },
+  "6 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@slidev/theme-default/0.21.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@slidev/theme-default",
+      "rawSpec": "*"
+    }
+  },
+  "7 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "code": "ERR_INVALID_THIS",
+      "attempts": 1,
+      "resource": "https://registry.npmjs.org/@iconify-json/logos/-/logos-1.1.9.tgz"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/@iconify-json/logos/-/logos-1.1.9.tgz"
+  },
+  "8 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "code": "ERR_INVALID_THIS",
+      "attempts": 1,
+      "resource": "https://registry.npmjs.org/@slidev/cli/-/cli-0.34.3.tgz"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/@slidev/cli/-/cli-0.34.3.tgz"
+  },
+  "9 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "code": "ERR_INVALID_THIS",
+      "attempts": 1,
+      "resource": "https://registry.npmjs.org/@slidev/theme-default/-/theme-default-0.21.2.tgz"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/@slidev/theme-default/-/theme-default-0.21.2.tgz"
+  },
+  "10 debug pnpm:request-retry": {
+    "attempt": 2,
+    "error": {
+      "code": "ERR_INVALID_THIS",
+      "attempts": 2,
+      "resource": "https://registry.npmjs.org/@iconify-json/logos/-/logos-1.1.9.tgz"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 60000,
+    "url": "https://registry.npmjs.org/@iconify-json/logos/-/logos-1.1.9.tgz"
+  },
+  "11 debug pnpm:request-retry": {
+    "attempt": 2,
+    "error": {
+      "code": "ERR_INVALID_THIS",
+      "attempts": 2,
+      "resource": "https://registry.npmjs.org/@slidev/cli/-/cli-0.34.3.tgz"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 60000,
+    "url": "https://registry.npmjs.org/@slidev/cli/-/cli-0.34.3.tgz"
+  },
+  "12 debug pnpm:request-retry": {
+    "attempt": 2,
+    "error": {
+      "code": "ERR_INVALID_THIS",
+      "attempts": 2,
+      "resource": "https://registry.npmjs.org/@slidev/theme-default/-/theme-default-0.21.2.tgz"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 60000,
+    "url": "https://registry.npmjs.org/@slidev/theme-default/-/theme-default-0.21.2.tgz"
+  },
+  "13 warn pnpm:package-requester": {
+    "message": "Fetching registry.npmjs.org/@iconify-json/logos/1.1.9 failed!",
+    "prefix": "/home/raouinti/Projects/VitifyProjects/vitify-slide"
+  },
+  "14 error pnpm": {
+    "code": "ERR_INVALID_THIS",
+    "attempts": 3,
+    "resource": "https://registry.npmjs.org/@iconify-json/logos/-/logos-1.1.9.tgz",
+    "err": {
+      "name": "pnpm",
+      "message": "Value of \"this\" must be of type URLSearchParams",
+      "code": "ERR_INVALID_THIS",
+      "stack": "pnpm [ERR_INVALID_THIS]: Value of \"this\" must be of type URLSearchParams\n    at Proxy.getAll (node:internal/url:542:13)\n    at Proxy.<anonymous> (/home/raouinti/.local/share/pnpm/.tools/pnpm/7.5.0/node_modules/.pnpm/pnpm@7.5.0/node_modules/pnpm/dist/pnpm.cjs:52589:55)\n    at /home/raouinti/.local/share/pnpm/.tools/pnpm/7.5.0/node_modules/.pnpm/pnpm@7.5.0/node_modules/pnpm/dist/pnpm.cjs:52639:31\n    at Array.reduce (<anonymous>)\n    at Proxy.raw (/home/raouinti/.local/share/pnpm/.tools/pnpm/7.5.0/node_modules/.pnpm/pnpm@7.5.0/node_modules/pnpm/dist/pnpm.cjs:52638:33)\n    at new Headers (/home/raouinti/.local/share/pnpm/.tools/pnpm/7.5.0/node_modules/.pnpm/pnpm@7.5.0/node_modules/pnpm/dist/pnpm.cjs:52539:28)\n    at getNodeRequestOptions (/home/raouinti/.local/share/pnpm/.tools/pnpm/7.5.0/node_modules/.pnpm/pnpm@7.5.0/node_modules/pnpm/dist/pnpm.cjs:52846:23)\n    at /home/raouinti/.local/share/pnpm/.tools/pnpm/7.5.0/node_modules/.pnpm/pnpm@7.5.0/node_modules/pnpm/dist/pnpm.cjs:52903:25\n    at new Promise (<anonymous>)\n    at fetch (/home/raouinti/.local/share/pnpm/.tools/pnpm/7.5.0/node_modules/.pnpm/pnpm@7.5.0/node_modules/pnpm/dist/pnpm.cjs:52901:14)"
+    }
+  },
+  "15 warn pnpm:package-requester": {
+    "message": "Fetching registry.npmjs.org/@slidev/cli/0.34.3 failed!",
+    "prefix": "/home/raouinti/Projects/VitifyProjects/vitify-slide"
+  },
+  "16 warn pnpm:package-requester": {
+    "message": "Fetching registry.npmjs.org/@slidev/theme-default/0.21.2 failed!",
+    "prefix": "/home/raouinti/Projects/VitifyProjects/vitify-slide"
+  }
+}
