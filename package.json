@@ -14,7 +14,6 @@
     "@slidev/theme-default": "*"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.1.9",
-    "playwright-chromium": "^1.53.2"
+    "@iconify-json/logos": "^1.1.9"
   }
 }
