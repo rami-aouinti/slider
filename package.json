@@ -5,7 +5,7 @@
   "author": "Yue JIN <yjin@nustarnuclear.com>",
   "description": "Presentation for Vitify Admin",
   "scripts": {
-    "build": "slidev build --base /vitify-slide/",
+    "build": "slidev build",
     "dev": "slidev --open",
     "export": "slidev export"
   },
