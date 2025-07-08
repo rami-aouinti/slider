@@ -15,3 +15,6 @@
     </div>
   </div>
 </template>
+<script lang="ts" setup>
+import Nustar from "../components/Nustar.vue";
+</script>

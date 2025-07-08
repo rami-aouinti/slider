@@ -1,4 +1,8 @@
 <template>
+  <div class="p-6 rounded bg-gray-100 dark:bg-gray-800 shadow">
+    <h2 class="text-2xl font-bold mb-2">{{ title }}</h2>
+    <p class="text-sm opacity-70">{{ subtitle }}</p>
+  </div>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -25,3 +29,9 @@
     </g>
   </svg>
 </template>
+<script lang="ts" setup>
+defineProps({
+  title: String,
+  subtitle: String,
+})
+</script>

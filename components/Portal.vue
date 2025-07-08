@@ -1,4 +1,8 @@
 <template>
+  <div class="border rounded p-4 bg-white dark:bg-gray-900">
+    <h3 class="text-xl font-semibold mb-1">{{ title }}</h3>
+    <p class="text-gray-600 dark:text-gray-400">{{ description }}</p>
+  </div>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -37,7 +41,12 @@
     <line x1="250" y1="20" x2="250" y2="200" stroke="#DA9022"></line>
   </svg>
 </template>
-
+<script lang="ts" setup>
+defineProps({
+  title: String,
+  description: String,
+})
+</script>
 <style>
 .anim {
   transform-origin: 50% 50%;
